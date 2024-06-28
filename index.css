@@ -1,0 +1,153 @@
+/* ToDoList.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(65, 37, 246) 0%,
+    rgb(130, 24, 236) 100%
+  );
+}
+
+.to-do-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 600px; /* Increased width */
+  max-height: 800px; /* Set maximum height */
+  overflow-y: auto; /* Add vertical scroll if content exceeds max height */
+  background: #161a2b;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  padding-left: 20px; /* Added padding to container */
+  padding-right: 20px; /* Added padding to container */
+}
+
+.to-do-list-container h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  max-width: 70%; /* Limit input width to 70% of parent width */
+}
+
+.input-container .add-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.input-container .add-button:hover {
+  background-color: #0056b3;
+}
+
+.to-do-list-container ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.to-do-list-container .task-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #161a2b;
+  border-radius: 4px;
+  padding-left: 15px; /* Added padding to task items */
+  padding-right: 15px; /* Added padding to task items */
+  max-width: 90%; /* Added max-width to prevent tasks from taking full width */
+  margin-left: auto; /* Center align task items */
+  margin-right: auto; /* Center align task items */
+  color: white;
+}
+
+.to-do-list-container .task-item .text {
+  flex: 1;
+}
+
+.to-do-list-container .task-item button {
+  margin-left: 5px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.to-do-list-container .task-item button:hover {
+  background-color: #f0f0f0;
+}
+
+.to-do-list-container .edit-button {
+  color: #007bff;
+}
+
+.to-do-list-container .delete-button {
+  color: #dc3545;
+}
+
+.to-do-list-container .move-button {
+  color: #28a745;
+}
+
+/* Alternating row colors based on nth-child */
+/* The provided CSS uses the nth-child pseudo-class to apply different linear gradients to every 4th row (4n + 1, 4n + 2, 4n + 3, 4n + 4), creating an alternating visual pattern for the list items. */
+
+.to-do-list-container ol li:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+.to-do-list-container ol li:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
+}
+
+.to-do-list-container ol li:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+}
+
+.to-do-list-container ol li:nth-child(4n + 4) {
+  background: linear-gradient(
+    90deg,
+    rgba(50, 200, 100, 1) 0%,
+    rgba(75, 150, 150, 1) 100%
+  );
+}
