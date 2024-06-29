@@ -23,3 +23,7 @@ To use this component in your React application, follow these steps:
 
 
 3. Ensure you have React set up and configured in your project.
+
+## Preview
+
+![ToDoList Preview](preview.png)
